@@ -46,8 +46,7 @@ export const site = {
       // This paragraph is optional — delete it if you'd rather not say it here.
       // Your résumé names the break openly, so the site does too.
       "I took a long break between 2018 and 2025 for my mental health. I'm not shy about it: it's the reason I build the way I do now — sustainably, honestly, and with a lot of care for the humans on the other side of the system.",
-      // TODO(Rupanjana): check the spelling of the book title before sharing this.
-      "Away from the terminal I read, box, play football, and wishlist Airbnbs. Right now I'm reading Viajaya Maria.",
+      "Away from the terminal I read, box, play football, and wishlist Airbnbs. Right now I'm reading Vijaya Maria.",
     ],
     // Small stat cards. Keep to 3 — they look best in a row.
     stats: [
