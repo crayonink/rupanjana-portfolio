@@ -7,19 +7,19 @@
 export const site = {
   /* ---- Basics ------------------------------------------------------------ */
   name: "Rupanjana Mitra",
-  role: "Backend & Systems Engineer",
+  role: "Founder & Backend Engineer",
   tagline:
-    "Backend & systems engineer who replaces fragile spreadsheets with systems that hold up",
+    "Founder of Kokum Labs, building Kokum Wire — supply chain intelligence for semiconductor procurement",
   location: "Panjim, India",
   intro:
-    "I build backend systems for business-critical commercial workflows — the pricing, approval and payment paths a company cannot afford to get wrong. I care about correctness, and about the person who has to run this at 2am.",
+    "I build backend systems for the parts of a business that cannot afford to be wrong — pricing, approvals, procurement. Right now I'm building Kokum Wire, which watches the chip supply chain and tells you, with dates and sources, what just changed and what to do about it.",
 
   /* ---- Hero rotating words ----------------------------------------------- */
   rotatingWords: [
+    "supply chain intelligence",
     "pricing engines",
-    "payment flows",
-    "fewer manual errors",
-    "systems that hold up",
+    "systems with real users",
+    "things that ship",
   ],
 
   /* ---- Contact & links --------------------------------------------------- */
@@ -56,6 +56,38 @@ export const site = {
     ],
   },
 
+  /* ---- What I'm building ------------------------------------------------- */
+  // The headline act. Copy is drawn from wire.kokumlabs.in — check the wording
+  // still matches the product before you send this to anyone who matters.
+  venture: {
+    eyebrow: "what I'm building right now",
+    company: "Kokum Labs",
+    product: "Kokum Wire",
+    headline: "Supply Chain Intelligence for Semiconductor Procurement",
+    pitch:
+      "Kokum Wire watches the chip supply chain and tells you — with dates and sources — what just changed and what to do about it.",
+    body: "It reads the signals that move semiconductor supply before they show up in a price: earnings calls, export data, equipment orders, hiring trends, government filings. Then it condenses them into something a buyer can act on. Every verdict is dated and sourced. Press releases don't count.",
+    href: "https://wire.kokumlabs.in",
+    features: [
+      {
+        title: "Ask the ledger",
+        body: "Query what changed in the supply chain, in plain language.",
+      },
+      {
+        title: "Synthesis desk",
+        body: "Cross-reference scattered signals into a single read.",
+      },
+      {
+        title: "Decision desk",
+        body: "Weigh buy timing against inventory, allocation and pricing.",
+      },
+      {
+        title: "Chip origin map",
+        body: "See where parts are actually made, and which suppliers are under stress.",
+      },
+    ],
+  },
+
   /* ---- Who I am ---------------------------------------------------------- */
   // The personal section. Everything here is yours to rewrite — it's the one
   // part of the site that isn't sourced from the résumé.
@@ -73,7 +105,7 @@ export const site = {
     },
 
     paragraphs: [
-      "I have worn multiple hats — from being a fairly successful Airbnb host with 200+ reviews, to being a fitness coach, a Math tutor, driving Uber, working as a tour guide, waiting tables in a high-end restaurant, and selling food on the street.",
+      "I have worn multiple hats — from being a fairly successful Airbnb host with 200+ reviews, to being a fitness coach, a Math tutor, riding for Uber, working as a tour guide, waiting tables in a high-end restaurant, and selling food on the street.",
       "I took up these jobs during my career break so I wouldn't have to depend on my parents' money, though they have been supportive of all my decisions. I get impatient if I'm not doing enough with my time. I like to try new things and see where they go. I can be very pragmatic without losing the bigger vision at its core.",
     ],
 
@@ -82,7 +114,7 @@ export const site = {
       { label: "Airbnb host", detail: "200+ reviews", color: "bg-crayon-pink" },
       { label: "Fitness coach", detail: "", color: "bg-crayon-yellow" },
       { label: "Math tutor", detail: "", color: "bg-crayon-sky" },
-      { label: "Uber driver", detail: "", color: "bg-crayon-green" },
+      { label: "Uber bike rider", detail: "", color: "bg-crayon-green" },
       { label: "Tour guide", detail: "", color: "bg-crayon-yellow" },
       { label: "Waiter", detail: "high-end restaurant", color: "bg-crayon-pink" },
       { label: "Street food seller", detail: "", color: "bg-crayon-sky" },
@@ -100,11 +132,11 @@ export const site = {
   skills: [
     {
       group: "Languages",
-      items: ["Java", "Python", "C++", "SQL", "JavaScript"],
+      items: ["Python", "Java", "SQL", "JavaScript", "C++"],
     },
     {
       group: "Frameworks",
-      items: ["Spring Boot", "Spring Security"],
+      items: ["FastAPI", "Spring Boot", "Spring Security"],
     },
     {
       group: "Systems",
@@ -118,30 +150,54 @@ export const site = {
 
   /* ---- Projects ---------------------------------------------------------- */
   // `featured: true` gives a project a larger card.
+  // Shipped-and-in-use first, then the ones built to learn. The Encon systems
+  // are the ones with users and numbers attached, so they lead.
+  // TODO(Rupanjana): check the two Encon descriptions match what they really do.
   projects: [
     {
-      title: "Pricing & Workflow Engine",
+      title: "Offer Generator",
       blurb:
-        "A backend system that replaced manual pricing workflows with rule-based computation and validation. Configurable pricing rules, multi-step approval flows, and data models designed so that a wrong number simply cannot get through.",
-      tags: ["Java", "Spring Boot", "PostgreSQL"],
+        "Replaced spreadsheet-driven costing and offer creation at Encon with a real backend service. Pricing rules live in the system instead of in a workbook someone forgot to update, and every offer goes through the same validated path.",
+      tags: ["Python", "FastAPI", "PostgreSQL"],
       impact:
-        "Correctness enforced by validation layers and deterministic processing, exercised against simulated real-world usage.",
+        "Cut offer turnaround by 70% and manual errors by 75%. In daily use by the commercial team.",
       href: "",
       repo: "",
       year: "2026",
       featured: true,
     },
     {
-      title: "Payment Processing & Reconciliation Service",
+      title: "RFQ Tracker",
       blurb:
-        "A service modelling real payment flows end to end — order creation, payment initiation, status tracking. Idempotent APIs so retries never double-charge, and asynchronous reconciliation that pulls system and payment state back together.",
-      tags: ["Java", "Spring Boot", "PostgreSQL"],
-      impact:
-        "Failure scenarios modelled explicitly, with retry-driven eventual consistency.",
+        "Tracks requests for quotation through the whole commercial pipeline — intake, costing, approval, response — so nothing stalls silently and everyone can see where a quote actually is.",
+      tags: ["Python", "FastAPI", "PostgreSQL"],
+      impact: "Running in production at Encon.",
       href: "",
       repo: "",
       year: "2026",
       featured: true,
+    },
+    {
+      title: "Pricing & Workflow Engine",
+      blurb:
+        "A rule-based pricing and multi-step approval engine, built to get the data modelling right: configurable rules, validation layers, and deterministic processing so a wrong number can't get through.",
+      tags: ["Java", "Spring Boot", "PostgreSQL"],
+      impact: "",
+      href: "",
+      repo: "",
+      year: "2026",
+      featured: false,
+    },
+    {
+      title: "Payment Processing & Reconciliation Service",
+      blurb:
+        "Payment flows end to end — order creation, initiation, status tracking. Idempotent APIs so retries never double-charge, and asynchronous reconciliation that pulls system and payment state back together after failure.",
+      tags: ["Java", "Spring Boot", "PostgreSQL"],
+      impact: "",
+      href: "",
+      repo: "",
+      year: "2026",
+      featured: false,
     },
     {
       title: "KDE Sheets — Google Summer of Code",
@@ -178,7 +234,7 @@ export const site = {
       period: "Aug 2018 — Dec 2025",
       points: [
         "Took a structured break to prioritise mental health and long-term sustainability.",
-        "Stayed self-supporting throughout: Airbnb host with 200+ reviews, fitness coach, Math tutor, Uber driver, tour guide, waiter, and street food seller.",
+        "Stayed self-supporting throughout: Airbnb host with 200+ reviews, fitness coach, Math tutor, Uber bike rider, tour guide, waiter, and street food seller.",
         "Featured in The Economic Times for resilience.",
       ],
     },
@@ -187,6 +243,8 @@ export const site = {
       company: "BillDesk",
       place: "Mumbai, India",
       period: "Jan 2016 — Jul 2018",
+      // Closes the May-2015-to-Jan-2016 gap, which otherwise reads as unexplained.
+      note: "Offer in hand on graduating; BillDesk's joining date was January 2016.",
       points: [
         "Developed Java and Spring backend services for internal payment systems.",
         "Optimised PostgreSQL schemas for transactional correctness and reporting.",
@@ -213,8 +271,8 @@ export const site = {
 
   /* ---- Contact section text ---------------------------------------------- */
   contact: {
-    heading: "Let's build something that holds up",
-    body: "I'm open to backend and systems roles, and to collaborations where correctness actually matters. Email is the fastest way to reach me — I reply to everything.",
+    heading: "Come talk to me about chips",
+    body: "I'm building Kokum Wire. If you buy semiconductors, invest in the people who do, or just want to argue about supply chain data — I'd like to hear from you. Email is fastest, or grab a slot straight in my calendar.",
   },
 };
 

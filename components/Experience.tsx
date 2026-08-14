@@ -77,6 +77,12 @@ export default function Experience() {
                       </p>
                     )}
 
+                    {"note" in job && job.note && (
+                      <p className="font-hand mt-1.5 text-lg text-crayon-blue">
+                        {job.note}
+                      </p>
+                    )}
+
                     <ul className="mt-4 space-y-2.5">
                       {job.points.map((point) => (
                         <li

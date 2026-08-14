@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
+import Building from "@/components/Building";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Me from "@/components/Me";
@@ -14,6 +15,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <Building />
         <Projects />
         <About />
         <Me />

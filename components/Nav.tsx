@@ -5,6 +5,7 @@ import { site } from "@/content/site";
 import { CircleScribble } from "./Doodles";
 
 const SECTIONS = [
+  { id: "building", label: "Kokum Wire" },
   { id: "work", label: "Work" },
   { id: "about", label: "About" },
   { id: "me", label: "Me" },
