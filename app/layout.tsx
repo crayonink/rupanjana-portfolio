@@ -27,6 +27,9 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
+  // Required for og:image to resolve to an absolute URL. Without it Next emits
+  // a relative path and every scraper (LinkedIn, WhatsApp, Slack) drops it.
+  metadataBase: new URL("https://rupanjana-portfolio.com"),
   title: `${site.name} — ${site.role}`,
   description: site.tagline,
   authors: [{ name: site.name }],
