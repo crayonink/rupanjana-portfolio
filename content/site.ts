@@ -118,6 +118,12 @@ export const site = {
       { label: "Street food seller", detail: "", color: "bg-crayon-sky" },
     ],
 
+    // A thing she likes knowing. Set `text` to "" to hide the card.
+    fact: {
+      label: "a thing I like knowing",
+      text: "Arabs who settled along the Konkan coast married local women, and their descendants became the Navayathis — a community of traders, and very good sailors.",
+    },
+
     // TODO(Rupanjana): send me the article link and I'll make this clickable.
     press: {
       outlet: "The Economic Times",

@@ -445,6 +445,30 @@ export function Snail(props: DoodleProps) {
   );
 }
 
+/** A sailing boat, for the people who were very good at sailing. */
+export function Boat(props: DoodleProps) {
+  const hull = "M10 62 H80 L71 76 Q45 82 19 76 Z";
+  const sailR = "M49 16 Q72 38 49 58 Z";
+  const sailL = "M41 20 L41 58 L23 58 Z";
+  return (
+    <Doodle {...props} viewBox="0 0 90 92">
+      <Fill d={hull} color="var(--crayon-brown)" off={[-3, 3]} opacity={0.5} />
+      <Fill d={sailR} color="var(--crayon-pink)" off={[3, -2]} opacity={0.55} />
+      <Fill d={sailL} color="var(--crayon-yellow)" off={[-2, -2]} opacity={0.6} />
+      <path d={hull} stroke={props.stroke ?? "var(--crayon-brown)"} strokeWidth="3.4" />
+      <path d="M45 62 V10" stroke={props.stroke ?? "var(--crayon-brown)"} strokeWidth="3.2" />
+      <path d={sailR} stroke={props.stroke ?? "var(--crayon-red)"} strokeWidth="3" />
+      <path d={sailL} stroke={props.stroke ?? "var(--crayon-orange)"} strokeWidth="3" />
+      {/* the sea */}
+      <path
+        d="M2 86 q9 -6 18 0 t18 0 t18 0 t18 0"
+        stroke="var(--crayon-blue)"
+        strokeWidth="2.8"
+      />
+    </Doodle>
+  );
+}
+
 /** A loose scribble, for underlining things with feeling. */
 export function Scribble(props: DoodleProps) {
   return (

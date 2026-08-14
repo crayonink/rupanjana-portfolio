@@ -11,6 +11,7 @@ import {
   Sun,
   Star,
   Butterfly,
+  Boat,
 } from "./Doodles";
 
 /** The little gallery of drawings taped up next to the story. */
@@ -153,6 +154,23 @@ export default function About() {
             ))}
           </ul>
         </Reveal>
+
+        {/* ---------------- The fact ---------------- */}
+        {personal.fact.text && (
+          <Reveal delay={80}>
+            <figure className="taped sticker crayon-box-alt mt-16 flex max-w-4xl -rotate-1 items-start gap-6 bg-crayon-sky/15 p-8 transition-transform duration-300 hover:rotate-0 sm:gap-8 sm:p-10">
+              <Boat className="w-20 shrink-0 animate-sway sm:w-24" />
+              <div>
+                <figcaption className="font-hand text-xl text-crayon-blue">
+                  {personal.fact.label}
+                </figcaption>
+                <p className="mt-2 font-display text-2xl leading-snug text-ink sm:text-3xl">
+                  {personal.fact.text}
+                </p>
+              </div>
+            </figure>
+          </Reveal>
+        )}
 
         {/* ---------------- Press + the line ---------------- */}
         <div className="mt-14 grid items-stretch gap-8 lg:grid-cols-[1fr_1.35fr]">
