@@ -122,7 +122,7 @@ export default function Contact() {
           {calendly && (
             <div className="mt-7">
               <p className="font-hand text-xl text-ink-soft">
-                or skip the back-and-forth —
+                or let&rsquo;s get on a Google Meet —
               </p>
               <a
                 href={calendly}
@@ -130,7 +130,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="crayon-chip sticker-sm mt-3 inline-flex rotate-1 items-center gap-2 bg-crayon-sky px-7 py-3 font-display text-2xl text-ink transition-transform hover:-rotate-1 hover:-translate-y-1"
               >
-                Grab a slot in my calendar
+                Grab a slot
                 <ArrowDoodle className="w-7" stroke="var(--color-ink)" fine />
               </a>
             </div>

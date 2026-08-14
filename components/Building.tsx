@@ -38,6 +38,13 @@ export default function Building() {
               {v.body}
             </p>
 
+            {/* The shorthand people actually repeat back to you. */}
+            {v.compare && (
+              <p className="font-hand mt-5 text-2xl text-crayon-red -rotate-1">
+                {v.compare}
+              </p>
+            )}
+
             {v.href && (
               <a
                 href={v.href}

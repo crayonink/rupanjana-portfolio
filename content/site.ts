@@ -12,7 +12,7 @@ export const site = {
     "Founder of Kokum Labs, building Kokum Wire — supply chain intelligence for semiconductor procurement",
   location: "Panjim, India",
   intro:
-    "I build backend systems for the parts of a business that cannot afford to be wrong — pricing, approvals, procurement. Right now I'm building Kokum Wire, which watches the chip supply chain and tells you, with dates and sources, what just changed and what to do about it.",
+    "I build backend systems that standardise messy manufacturing workflows. Right now that's Kokum Wire, which tells chip buyers what just changed in their supply chain — with dates and sources — and what to do about it.",
 
   /* ---- Hero rotating words ----------------------------------------------- */
   rotatingWords: [
@@ -46,7 +46,8 @@ export const site = {
       // This paragraph is optional — delete it if you'd rather not say it here.
       // Your résumé names the break openly, so the site does too.
       "I took a long break between 2018 and 2025 for my mental health. I'm not shy about it: it's the reason I build the way I do now — sustainably, honestly, and with a lot of care for the humans on the other side of the system.",
-      "Away from the terminal I'm the one with the crayons. The drawings scattered around this site are the good stuff — made by small people who have not yet been told what colour a sky has to be.",
+      // TODO(Rupanjana): check the spelling of the book title before sharing this.
+      "Away from the terminal I draw, read — right now it's Viajaya Maria — box, play football, wishlist Airbnbs I have no immediate plans to book, and eat my friends' heads with unasked-for knowledge.",
     ],
     // Small stat cards. Keep to 3 — they look best in a row.
     stats: [
@@ -66,7 +67,9 @@ export const site = {
     headline: "Supply Chain Intelligence for Semiconductor Procurement",
     pitch:
       "Kokum Wire watches the chip supply chain and tells you — with dates and sources — what just changed and what to do about it.",
-    body: "It reads the signals that move semiconductor supply before they show up in a price: earnings calls, export data, equipment orders, hiring trends, government filings. Then it condenses them into something a buyer can act on. Every verdict is dated and sourced. Press releases don't count.",
+    body: "It reads the signals that move semiconductor supply before they show up in a price: earnings calls, export data, equipment orders, hiring trends, government filings. Then it condenses them into something a buyer can act on. Every verdict is dated and sourced.",
+    // The one-line positioning shorthand. Set to "" to hide it.
+    compare: "Think Prewave, but more niche.",
     href: "https://wire.kokumlabs.in",
     features: [
       {
@@ -272,7 +275,7 @@ export const site = {
   /* ---- Contact section text ---------------------------------------------- */
   contact: {
     heading: "Come talk to me about chips",
-    body: "I'm building Kokum Wire. If you buy semiconductors, invest in the people who do, or just want to argue about supply chain data — I'd like to hear from you. Email is fastest, or grab a slot straight in my calendar.",
+    body: "I'm building Kokum Wire. If you buy semiconductors, invest in the people who do, or just want to argue about supply chain data — I'd like to hear from you. Email me, or let's get on a Google Meet.",
   },
 };
 
