@@ -32,6 +32,8 @@ export const site = {
     github: "https://github.com/crayonink",
     linkedin: "https://linkedin.com/in/mrupanjana",
     twitter: "",
+    // Booking link. The trailing hyphen in the pasted URL 404s; this one resolves.
+    calendly: "https://calendly.com/rupa-kokumlabs/let-s-hang",
     // Put your PDF at public/resume.pdf, then set this to "/resume.pdf"
     resume: "",
   },

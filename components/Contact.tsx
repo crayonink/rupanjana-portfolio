@@ -53,7 +53,7 @@ function SocialLink({
 }
 
 export default function Contact() {
-  const { github, linkedin, twitter, resume } = site.links;
+  const { github, linkedin, twitter, resume, calendly } = site.links;
 
   const socials = [
     github && { kind: "github", href: github, label: "GitHub" },
@@ -117,6 +117,23 @@ export default function Contact() {
                 {site.phone}
               </a>
             </p>
+          )}
+
+          {calendly && (
+            <div className="mt-7">
+              <p className="font-hand text-xl text-ink-soft">
+                or skip the back-and-forth —
+              </p>
+              <a
+                href={calendly}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="crayon-chip sticker-sm mt-3 inline-flex rotate-1 items-center gap-2 bg-crayon-sky px-7 py-3 font-display text-2xl text-ink transition-transform hover:-rotate-1 hover:-translate-y-1"
+              >
+                Grab a slot in my calendar
+                <ArrowDoodle className="w-7" stroke="var(--color-ink)" fine />
+              </a>
+            </div>
           )}
         </Reveal>
 
