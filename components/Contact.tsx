@@ -1,5 +1,6 @@
 import { site } from "@/content/site";
 import Reveal from "./Reveal";
+import { Rainbow, Sun, Flower, Grass, Heart, ArrowDoodle } from "./Doodles";
 
 /** Brand glyphs, inlined so the site makes no external requests. */
 const ICONS: Record<string, React.ReactNode> = {
@@ -15,16 +16,23 @@ const ICONS: Record<string, React.ReactNode> = {
   email: (
     <path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm10 8.13L3.5 6.2V18h17V6.2L12 12.13ZM12 10 20.3 4.4H3.7L12 10Z" />
   ),
+  phone: (
+    <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1l-2.2 2.2Z" />
+  ),
 };
+
+const TILT = ["-rotate-3", "rotate-2", "-rotate-2", "rotate-3", "-rotate-1"];
 
 function SocialLink({
   kind,
   href,
   label,
+  i,
 }: {
   kind: string;
   href: string;
   label: string;
+  i: number;
 }) {
   return (
     <a
@@ -33,7 +41,9 @@ function SocialLink({
       rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
       aria-label={label}
       title={label}
-      className="group flex h-14 w-14 items-center justify-center rounded-2xl border border-line bg-surface text-muted transition-all hover:-translate-y-1 hover:border-brand-2 hover:text-white"
+      className={`crayon-chip sticker-sm flex h-14 w-14 items-center justify-center bg-paper-2 text-ink ${
+        TILT[i % TILT.length]
+      } transition-transform hover:-translate-y-1 hover:rotate-0 hover:bg-crayon-yellow`}
     >
       <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
         {ICONS[kind]}
@@ -45,62 +55,91 @@ function SocialLink({
 export default function Contact() {
   const { github, linkedin, twitter, resume } = site.links;
 
+  const socials = [
+    github && { kind: "github", href: github, label: "GitHub" },
+    linkedin && { kind: "linkedin", href: linkedin, label: "LinkedIn" },
+    twitter && { kind: "twitter", href: twitter, label: "X (Twitter)" },
+    { kind: "email", href: `mailto:${site.email}`, label: "Email" },
+    site.phone && {
+      kind: "phone",
+      href: `tel:${site.phone.replace(/\s/g, "")}`,
+      label: `Call ${site.phone}`,
+    },
+  ].filter(Boolean) as { kind: string; href: string; label: string }[];
+
   return (
     <section id="contact" className="relative overflow-hidden px-6 py-28 sm:py-36">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-1/2 h-[36rem] w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-1/15 blur-[130px] animate-blob" />
-        <div
-          className="absolute left-1/3 top-1/2 h-[30rem] w-[30rem] -translate-y-1/2 rounded-full bg-brand-2/15 blur-[130px] animate-blob"
-          style={{ animationDelay: "-9s" }}
-        />
+        <Sun className="absolute left-[8%] top-10 w-20 animate-sway" />
+        <Flower className="absolute bottom-16 right-[8%] w-16" />
+        <Flower className="absolute bottom-14 right-[18%] hidden w-12 sm:block" />
+        <Grass className="absolute inset-x-0 bottom-0 h-10 w-full opacity-60" />
       </div>
 
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-brand-1">
-            Contact
+          <Rainbow className="mx-auto mb-6 w-44" />
+
+          <p className="font-hand text-2xl text-crayon-blue">
+            the bit where you say hello
           </p>
-          <h2 className="text-[clamp(2.25rem,8vw,4.5rem)] font-black leading-[1.05] tracking-tighter text-white">
+
+          <h2 className="mt-2 font-display text-[clamp(2.5rem,8vw,4.75rem)] leading-[0.95] text-ink">
             {site.contact.heading}
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-body">
+
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
             {site.contact.body}
           </p>
         </Reveal>
 
         <Reveal delay={120}>
-          <a
-            href={`mailto:${site.email}`}
-            className="mt-10 inline-block break-all rounded-full bg-gradient-to-r from-brand-1 via-brand-2 to-brand-3 px-9 py-5 text-lg font-black tracking-tight text-white shadow-xl shadow-brand-1/25 transition-transform hover:scale-105 sm:text-xl"
-          >
-            {site.email}
-          </a>
+          <div className="mt-10 flex items-center justify-center gap-3">
+            <ArrowDoodle
+              className="hidden w-16 rotate-[18deg] text-crayon-red sm:block"
+              stroke="var(--color-crayon-red)"
+            />
+            <a
+              href={`mailto:${site.email}`}
+              className="crayon-box sticker inline-block -rotate-1 break-all bg-crayon-yellow px-8 py-4 font-display text-2xl text-ink transition-transform hover:rotate-1 hover:-translate-y-1 sm:text-3xl"
+            >
+              {site.email}
+            </a>
+          </div>
+
+          {site.phone && (
+            <p className="mt-5 font-hand text-xl text-ink-soft">
+              or ring me:{" "}
+              <a
+                href={`tel:${site.phone.replace(/\s/g, "")}`}
+                className="text-crayon-blue underline decoration-wavy underline-offset-4 hover:text-crayon-red"
+              >
+                {site.phone}
+              </a>
+            </p>
+          )}
         </Reveal>
 
         <Reveal delay={220}>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
-            {github && <SocialLink kind="github" href={github} label="GitHub" />}
-            {linkedin && (
-              <SocialLink kind="linkedin" href={linkedin} label="LinkedIn" />
-            )}
-            {twitter && (
-              <SocialLink kind="twitter" href={twitter} label="X (Twitter)" />
-            )}
-            <SocialLink
-              kind="email"
-              href={`mailto:${site.email}`}
-              label="Email"
-            />
+            {socials.map((s, i) => (
+              <SocialLink key={s.kind} i={i} {...s} />
+            ))}
           </div>
 
           {resume && (
             <a
               href={resume}
-              className="mt-8 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-muted underline-offset-4 hover:text-white hover:underline"
+              className="crayon-chip sticker-sm mt-10 inline-flex items-center gap-2 bg-paper-2 px-6 py-2.5 font-display text-xl text-ink transition-transform hover:-translate-y-1 hover:rotate-2"
             >
               Download résumé
+              <ArrowDoodle className="w-6" stroke="var(--color-ink)" fine />
             </a>
           )}
+
+          <p className="margin-note mx-auto mt-10 inline-flex items-center gap-2">
+            <Heart className="w-6" fine /> thanks for scrolling all the way down
+          </p>
         </Reveal>
       </div>
     </section>

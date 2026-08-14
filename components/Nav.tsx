@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { site } from "@/content/site";
+import { CircleScribble } from "./Doodles";
 
 const SECTIONS = [
   { id: "work", label: "Work" },
@@ -46,43 +47,49 @@ export default function Nav() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-line/70 bg-ink/80 backdrop-blur-xl"
-          : "border-b border-transparent"
+          ? "border-b-[2.5px] border-ink bg-paper/90 backdrop-blur-sm"
+          : "border-b-[2.5px] border-transparent"
       }`}
     >
       <nav
         aria-label="Main"
-        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3"
       >
         <a
           href="#top"
-          className="text-lg font-black tracking-tight text-white"
+          className="font-display text-3xl leading-none text-ink transition-transform hover:-rotate-3"
         >
-          {/* Initials mark — small and quiet next to the hero. */}
-          RM<span className="text-brand-1">.</span>
+          {/* Initials, scrawled in the corner of the page like a name on homework. */}
+          RM
+          <span className="text-crayon-red">.</span>
         </a>
 
         {/* Desktop links */}
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-7 md:flex">
           {SECTIONS.map((s) => (
             <li key={s.id}>
               <a
                 href={`#${s.id}`}
                 aria-current={active === s.id ? "true" : undefined}
-                className={`text-sm font-semibold uppercase tracking-widest transition-colors ${
-                  active === s.id
-                    ? "text-white"
-                    : "text-muted hover:text-white"
-                }`}
+                className="relative block font-display text-xl text-ink transition-transform hover:-translate-y-0.5"
               >
                 {s.label}
+                {/* The active link gets circled, the way you circle the one
+                    that matters on a printout. */}
+                {active === s.id && (
+                  <CircleScribble
+                    className="pointer-events-none absolute -inset-x-3 -inset-y-2 h-[calc(100%+1rem)] w-[calc(100%+1.5rem)]"
+                    stroke="var(--color-crayon-red)"
+                    fine
+                  />
+                )}
               </a>
             </li>
           ))}
           <li>
             <a
               href="#contact"
-              className="rounded-full bg-gradient-to-r from-brand-1 to-brand-2 px-5 py-2 text-sm font-bold text-white transition-transform hover:scale-105"
+              className="crayon-chip sticker-sm inline-block bg-crayon-yellow px-5 py-1.5 font-display text-xl text-ink transition-transform hover:-translate-y-0.5 hover:rotate-2"
             >
               Hire me
             </a>
@@ -99,17 +106,17 @@ export default function Nav() {
           className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
         >
           <span
-            className={`h-0.5 w-6 bg-white transition-transform duration-300 ${
+            className={`h-[3px] w-6 rounded-full bg-ink transition-transform duration-300 ${
               open ? "translate-y-2 rotate-45" : ""
             }`}
           />
           <span
-            className={`h-0.5 w-6 bg-white transition-opacity duration-300 ${
+            className={`h-[3px] w-6 rounded-full bg-ink transition-opacity duration-300 ${
               open ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`h-0.5 w-6 bg-white transition-transform duration-300 ${
+            className={`h-[3px] w-6 rounded-full bg-ink transition-transform duration-300 ${
               open ? "-translate-y-2 -rotate-45" : ""
             }`}
           />
@@ -120,7 +127,7 @@ export default function Nav() {
       <div
         id="mobile-menu"
         hidden={!open}
-        className="border-t border-line bg-ink-soft px-6 py-4 md:hidden"
+        className="border-t-[2.5px] border-ink bg-paper-2 px-6 py-4 md:hidden"
       >
         <ul className="flex flex-col gap-1">
           {[...SECTIONS, { id: "contact", label: "Contact" }].map((s) => (
@@ -128,7 +135,7 @@ export default function Nav() {
               <a
                 href={`#${s.id}`}
                 onClick={() => setOpen(false)}
-                className="block rounded-lg px-3 py-3 text-base font-semibold text-body hover:bg-surface hover:text-white"
+                className="block px-3 py-3 font-display text-2xl text-ink hover:text-crayon-red"
               >
                 {s.label}
               </a>
@@ -139,7 +146,7 @@ export default function Nav() {
               <a
                 href={site.links.resume}
                 onClick={() => setOpen(false)}
-                className="block rounded-lg px-3 py-3 text-base font-semibold text-body hover:bg-surface hover:text-white"
+                className="block px-3 py-3 font-display text-2xl text-ink hover:text-crayon-red"
               >
                 Résumé
               </a>

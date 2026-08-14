@@ -1,117 +1,113 @@
 /* ============================================================================
  *  EDIT THIS FILE — and only this file — to change everything on the site.
- *  Anything marked  // TODO  is placeholder text you should replace.
+ *  Content is drawn from Rupanjana's résumé (ResumeRupaDesigned.pdf).
  *  Save the file and the browser refreshes on its own.
  * ==========================================================================*/
 
 export const site = {
   /* ---- Basics ------------------------------------------------------------ */
   name: "Rupanjana Mitra",
-  // Shown under your name in the hero. Keep it short.
-  role: "Software Engineer", // TODO: e.g. "Data Scientist", "Full-Stack Engineer"
-  // Browser tab title + Google search result title.
-  tagline: "Software Engineer building data-driven products",  // TODO
-  location: "Kolkata, India", // TODO
-  // One or two sentences. This is the first thing a recruiter reads.
+  role: "Backend & Systems Engineer",
+  tagline:
+    "Backend & systems engineer who replaces fragile spreadsheets with systems that hold up",
+  location: "Panjim, India",
   intro:
-    "I build reliable, well-tested software and turn messy data into things people can actually use.", // TODO
+    "I build backend systems for business-critical commercial workflows — the pricing, approval and payment paths a company cannot afford to get wrong. I care about correctness, and about the person who has to run this at 2am.",
 
   /* ---- Hero rotating words ----------------------------------------------- */
-  // These cycle in the headline. 3–5 words works best.
-  rotatingWords: ["scalable systems", "clean data", "useful tools", "better UX"], // TODO
+  rotatingWords: [
+    "pricing engines",
+    "payment flows",
+    "fewer manual errors",
+    "systems that hold up",
+  ],
 
   /* ---- Contact & links --------------------------------------------------- */
   // Leave any value as an empty string "" to hide that link entirely.
   email: "mrupanjana@gmail.com",
+  phone: "+91 78278 58997", // set to "" to hide
   links: {
-    github: "https://github.com/your-username",       // TODO
-    linkedin: "https://linkedin.com/in/your-profile", // TODO
-    twitter: "",                                      // optional
-    // Résumé link is hidden until you set this, so the site never ships a
-    // dead link. Put your PDF at public/resume.pdf, then set: "/resume.pdf"
+    github: "https://github.com/crayonink",
+    linkedin: "https://linkedin.com/in/mrupanjana",
+    twitter: "",
+    // Put your PDF at public/resume.pdf, then set this to "/resume.pdf"
     resume: "",
   },
 
   /* ---- About ------------------------------------------------------------- */
   about: {
-    // 2–3 short paragraphs. Write like you talk.
     paragraphs: [
-      "I'm a software engineer with a focus on backend systems and data pipelines. I care about code that's boring in the best way — predictable, tested, and easy for the next person to pick up.", // TODO
-      "Over the last several years I've worked across the stack: designing APIs, wrangling ETL jobs, and shipping interfaces that make complex data feel simple.", // TODO
-      "Outside of work you'll find me reading, cooking, or poking at a side project that will definitely be finished this time.", // TODO
+      "I'm a backend engineer. Most of what I've built lives out of sight: pricing engines, approval flows, payment reconciliation — the machinery underneath a business, where being wrong is expensive and being unpredictable is worse.",
+      "My favourite kind of work is taking something error-prone and manual and making it deterministic. At Encon I replaced spreadsheet-driven costing with real systems, and watched offer turnaround drop by 70% and manual errors by 75%. I own the whole lifecycle — architecture, deployment, monitoring, and the 2am pages.",
+      // This paragraph is optional — delete it if you'd rather not say it here.
+      // Your résumé names the break openly, so the site does too.
+      "I took a long break between 2018 and 2025 for my mental health. I'm not shy about it: it's the reason I build the way I do now — sustainably, honestly, and with a lot of care for the humans on the other side of the system.",
+      "Away from the terminal I'm the one with the crayons. The drawings scattered around this site are the good stuff — made by small people who have not yet been told what colour a sky has to be.",
     ],
     // Small stat cards. Keep to 3 — they look best in a row.
     stats: [
-      { value: "8+", label: "Years building software" }, // TODO
-      { value: "20+", label: "Projects shipped" },       // TODO
-      { value: "5", label: "Teams collaborated with" },  // TODO
+      { value: "70%", label: "Faster offer turnaround" },
+      { value: "75%", label: "Fewer manual errors" },
+      { value: "2014", label: "Google Summer of Code" },
     ],
   },
 
   /* ---- Skills ------------------------------------------------------------ */
-  // Add or remove whole groups freely.
   skills: [
     {
       group: "Languages",
-      items: ["Python", "TypeScript", "SQL", "Java", "Go"], // TODO
+      items: ["Java", "Python", "C++", "SQL", "JavaScript"],
     },
     {
-      group: "Frameworks & Libraries",
-      items: ["React", "Next.js", "Node.js", "FastAPI", "pandas", "PyTorch"], // TODO
+      group: "Frameworks",
+      items: ["Spring Boot", "Spring Security"],
     },
     {
-      group: "Data & Infrastructure",
-      items: ["PostgreSQL", "MongoDB", "Docker", "AWS", "Airflow", "Redis"], // TODO
+      group: "Systems",
+      items: ["Distributed Systems", "Concurrency", "Fault Tolerance"],
     },
     {
-      group: "Practices",
-      items: ["Testing", "CI/CD", "Code review", "System design", "Agile"], // TODO
+      group: "Tools",
+      items: ["PostgreSQL", "Redis", "Docker", "Git", "GCP"],
     },
   ],
 
   /* ---- Projects ---------------------------------------------------------- */
-  // The heart of the site. 3–6 projects is the sweet spot.
   // `featured: true` gives a project a larger card.
   projects: [
     {
-      title: "Realtime Analytics Dashboard", // TODO
+      title: "Pricing & Workflow Engine",
       blurb:
-        "A streaming dashboard that ingests 2M+ events/day and renders live metrics with sub-second latency.", // TODO
-      tags: ["TypeScript", "Next.js", "WebSockets", "PostgreSQL"], // TODO
-      // Optional: a concrete outcome. Shows impact, not just tech.
-      impact: "Cut internal reporting time from 3 hours to instant.", // TODO
-      href: "",       // live demo URL — leave "" to hide the button
-      repo: "",       // GitHub URL — leave "" to hide the button
+        "A backend system that replaced manual pricing workflows with rule-based computation and validation. Configurable pricing rules, multi-step approval flows, and data models designed so that a wrong number simply cannot get through.",
+      tags: ["Java", "Spring Boot", "PostgreSQL"],
+      impact:
+        "Correctness enforced by validation layers and deterministic processing, exercised against simulated real-world usage.",
+      href: "",
+      repo: "",
+      year: "2026",
       featured: true,
     },
     {
-      title: "ETL Pipeline Framework", // TODO
+      title: "Payment Processing & Reconciliation Service",
       blurb:
-        "A configurable pipeline runner that replaced a pile of cron scripts with declarative, retryable jobs.", // TODO
-      tags: ["Python", "Airflow", "Docker", "AWS"], // TODO
-      impact: "Reduced pipeline failures by ~80%.", // TODO
+        "A service modelling real payment flows end to end — order creation, payment initiation, status tracking. Idempotent APIs so retries never double-charge, and asynchronous reconciliation that pulls system and payment state back together.",
+      tags: ["Java", "Spring Boot", "PostgreSQL"],
+      impact:
+        "Failure scenarios modelled explicitly, with retry-driven eventual consistency.",
       href: "",
       repo: "",
+      year: "2026",
       featured: true,
     },
     {
-      title: "Document Search Engine", // TODO
+      title: "KDE Sheets — Google Summer of Code",
       blurb:
-        "Semantic search over a 50k-document corpus using embeddings and a vector index.", // TODO
-      tags: ["Python", "FastAPI", "Embeddings"], // TODO
+        "Built user-facing UI features for KDE Sheets as a Google Summer of Code intern, working with open-source maintainers across the world on feature design and code review.",
+      tags: ["C++", "KDE", "Open Source"],
       impact: "",
       href: "",
       repo: "",
-      featured: false,
-    },
-    {
-      title: "Open Source Contributions", // TODO
-      blurb:
-        "Bug fixes and documentation improvements across data tooling in the Python ecosystem.", // TODO
-      tags: ["Python", "Open Source"], // TODO
-      impact: "",
-      href: "",
-      repo: "",
+      year: "2014",
       featured: false,
     },
   ],
@@ -120,29 +116,59 @@ export const site = {
   // Most recent first. Delete the whole array to hide this section.
   experience: [
     {
-      role: "Senior Software Engineer",     // TODO
-      company: "Company Name",              // TODO
-      period: "2022 — Present",             // TODO
+      role: "Senior Software Engineer — Backend & Systems",
+      company: "Encon Thermal Engineering Pvt. Ltd.",
+      place: "Panjim, India",
+      period: "Jan 2026 — Present",
       points: [
-        "Led the redesign of the core data ingestion service, improving throughput 4x.", // TODO
-        "Mentored three junior engineers through onboarding and their first production releases.", // TODO
+        "Designed and deployed backend systems replacing spreadsheet-driven costing and offer workflows.",
+        "Reduced offer turnaround time by 70% and manual errors by 75%.",
+        "Owned system architecture, deployment, monitoring, and operational support.",
+        "Worked closely with business stakeholders to translate pricing and commercial requirements into system design.",
       ],
     },
     {
-      role: "Software Engineer",  // TODO
-      company: "Previous Company", // TODO
-      period: "2019 — 2022",       // TODO
+      role: "Career Break — Mental Health & Well-Being",
+      company: "",
+      place: "",
+      period: "Aug 2018 — Dec 2025",
       points: [
-        "Built and maintained internal APIs serving 100k+ daily requests.", // TODO
-        "Introduced automated testing that took coverage from 30% to 85%.", // TODO
+        "Took a structured break to prioritise mental health and long-term sustainability.",
+      ],
+    },
+    {
+      role: "Software Engineer",
+      company: "BillDesk",
+      place: "Mumbai, India",
+      period: "Jan 2016 — Jul 2018",
+      points: [
+        "Developed Java and Spring backend services for internal payment systems.",
+        "Optimised PostgreSQL schemas for transactional correctness and reporting.",
+      ],
+    },
+    {
+      role: "Google Summer of Code Intern — KDE Sheets",
+      company: "KDE",
+      place: "Remote",
+      period: "May 2014 — Sep 2014",
+      points: [
+        "Implemented user-facing UI features for KDE Sheets as part of Google Summer of Code.",
+        "Collaborated with global open-source maintainers on feature design and code reviews.",
       ],
     },
   ],
 
+  /* ---- Education --------------------------------------------------------- */
+  education: {
+    school: "National Institute of Technology Durgapur, India",
+    degree: "B.Tech in Computer Science and Engineering",
+    period: "Aug 2011 — May 2015",
+  },
+
   /* ---- Contact section text ---------------------------------------------- */
   contact: {
-    heading: "Let's work together",
-    body: "I'm open to interesting roles and collaborations. The fastest way to reach me is email — I reply to everything.", // TODO
+    heading: "Let's build something that holds up",
+    body: "I'm open to backend and systems roles, and to collaborations where correctness actually matters. Email is the fastest way to reach me — I reply to everything.",
   },
 };
 

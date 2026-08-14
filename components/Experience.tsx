@@ -1,64 +1,102 @@
 import { site } from "@/content/site";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import { Heart, Cloud, Bird } from "./Doodles";
 
 export default function Experience() {
-  // Emptying the array in content/site.ts removes this section entirely.
-  if (site.experience.length === 0) return null;
-
   return (
-    // overflow-hidden clips the decorative glow below so it can't widen the page.
-    <section id="experience" className="relative overflow-hidden px-6 py-24 sm:py-32">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-40 top-1/3 -z-10 h-[26rem] w-[26rem] rounded-full bg-brand-1/10 blur-[120px]"
-      />
+    <section id="experience" className="relative px-6 py-24 sm:py-32">
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <Cloud className="absolute left-[4%] top-14 w-28 opacity-50" />
+        <Bird className="absolute right-[10%] top-24 w-14 animate-float opacity-70" />
+      </div>
 
+      {/* max-w-6xl matches every other section, so the heading starts on the
+          same left margin; the timeline itself stays narrow for readability. */}
       <div className="mx-auto max-w-6xl">
-        <SectionHeading eyebrow="Experience" title="Where I've worked" />
+        <SectionHeading
+          eyebrow="how I got here"
+          title="Experience"
+        />
 
-        <div className="relative mt-14">
-          {/* Vertical timeline rail, fading out at the bottom. */}
-          <div
+        <ol className="relative mt-16 max-w-4xl space-y-8">
+          {/* The hand-drawn spine of the timeline. */}
+          <span
             aria-hidden
-            className="absolute left-[7px] top-2 bottom-2 w-px bg-gradient-to-b from-brand-1 via-brand-2 to-transparent sm:left-[9px]"
+            className="absolute left-[7px] top-4 bottom-4 hidden w-[3px] rounded-full bg-crayon-brown/40 sm:block"
           />
 
-          <ol className="space-y-12">
-            {site.experience.map((job, i) => (
-              <li key={`${job.company}-${job.period}`} className="relative pl-10 sm:pl-14">
-                <Reveal delay={i * 110}>
-                  {/* Timeline dot */}
+          {site.experience.map((job, i) => {
+            // The career break has no employer — it gets a gentler card, and a
+            // heart instead of a bullet. It belongs on the timeline like
+            // anything else that shaped how she works.
+            const isBreak = !job.company;
+
+            return (
+              <Reveal key={`${job.role}-${job.period}`} delay={i * 90}>
+                <li className="relative sm:pl-12">
+                  {/* Timeline marker */}
                   <span
                     aria-hidden
-                    className="absolute left-0 top-2 h-4 w-4 rounded-full bg-gradient-to-br from-brand-1 to-brand-2 ring-4 ring-ink sm:h-5 sm:w-5"
-                  />
+                    className="absolute left-0 top-6 hidden sm:block"
+                  >
+                    {isBreak ? (
+                      <Heart className="-ml-2 w-8" fine />
+                    ) : (
+                      <span className="block h-[17px] w-[17px] rounded-full border-[3px] border-ink bg-crayon-yellow" />
+                    )}
+                  </span>
 
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-3">
-                    {job.period}
-                  </p>
-                  <h3 className="mt-2 text-2xl font-black tracking-tight text-white sm:text-3xl">
-                    {job.role}
-                  </h3>
-                  <p className="mt-1 text-lg font-semibold text-muted">
-                    {job.company}
-                  </p>
+                  <div
+                    className={`sticker-sm p-6 transition-transform duration-300 hover:rotate-0 sm:p-7 ${
+                      isBreak
+                        ? "crayon-box-alt rotate-[0.8deg] bg-crayon-pink/15"
+                        : `crayon-box bg-paper-2 ${
+                            i % 2 === 0 ? "-rotate-[0.7deg]" : "rotate-[0.7deg]"
+                          }`
+                    }`}
+                  >
+                    <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                      <h3 className="font-display text-2xl leading-tight text-ink sm:text-3xl">
+                        {job.role}
+                      </h3>
+                      <p className="font-hand text-xl text-crayon-blue">
+                        {job.period}
+                      </p>
+                    </div>
 
-                  <ul className="mt-4 space-y-2.5">
-                    {job.points.map((point, j) => (
-                      <li
-                        key={j}
-                        className="relative pl-5 leading-relaxed text-body before:absolute before:left-0 before:top-[0.6em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-brand-2"
-                      >
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                </Reveal>
-              </li>
-            ))}
-          </ol>
-        </div>
+                    {job.company && (
+                      <p className="mt-1 font-bold text-crayon-red">
+                        {job.company}
+                        {job.place && (
+                          <span className="font-normal text-muted">
+                            {" · "}
+                            {job.place}
+                          </span>
+                        )}
+                      </p>
+                    )}
+
+                    <ul className="mt-4 space-y-2.5">
+                      {job.points.map((point) => (
+                        <li
+                          key={point}
+                          className="flex items-start gap-3 leading-relaxed text-ink-soft"
+                        >
+                          <span
+                            aria-hidden
+                            className="mt-2.5 block h-2 w-2 shrink-0 rotate-45 bg-crayon-orange"
+                          />
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </li>
+              </Reveal>
+            );
+          })}
+        </ol>
       </div>
     </section>
   );
