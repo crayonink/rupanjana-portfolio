@@ -7,8 +7,10 @@ import { CircleScribble } from "./Doodles";
 const SECTIONS = [
   { id: "work", label: "Work" },
   { id: "about", label: "About" },
+  { id: "me", label: "Me" },
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
+  { id: "contact", label: "Contact" },
 ];
 
 export default function Nav() {
@@ -86,14 +88,6 @@ export default function Nav() {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href="#contact"
-              className="crayon-chip sticker-sm inline-block bg-crayon-yellow px-5 py-1.5 font-display text-xl text-ink transition-transform hover:-translate-y-0.5 hover:rotate-2"
-            >
-              Hire me
-            </a>
-          </li>
         </ul>
 
         {/* Mobile toggle */}
@@ -130,7 +124,7 @@ export default function Nav() {
         className="border-t-[2.5px] border-ink bg-paper-2 px-6 py-4 md:hidden"
       >
         <ul className="flex flex-col gap-1">
-          {[...SECTIONS, { id: "contact", label: "Contact" }].map((s) => (
+          {SECTIONS.map((s) => (
             <li key={s.id}>
               <a
                 href={`#${s.id}`}

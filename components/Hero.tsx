@@ -46,14 +46,6 @@ export default function Hero() {
       <div className="mx-auto grid w-full max-w-6xl items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
         {/* ---------------- Left: the words ---------------- */}
         <div>
-          <p className="crayon-chip sticker-sm mb-7 inline-flex -rotate-2 items-center gap-2 bg-paper-2 px-4 py-1.5 text-sm font-bold text-ink">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-crayon-green opacity-75" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-crayon-green" />
-            </span>
-            Available for work
-          </p>
-
           <h1 className="font-display text-[clamp(3.25rem,11vw,7rem)] leading-[0.88] text-ink">
             {first}
             <br />

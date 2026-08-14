@@ -54,6 +54,48 @@ export const site = {
     ],
   },
 
+  /* ---- Who I am ---------------------------------------------------------- */
+  // The personal section. Everything here is yours to rewrite — it's the one
+  // part of the site that isn't sourced from the résumé.
+  personal: {
+    eyebrow: "the unprofessional bit",
+    title: "Who I am",
+    blurb:
+      "The parts that don't fit on a résumé, and matter more than the parts that do.",
+
+    // TODO(Rupanjana): confirm the exact wording and tell me where it's from,
+    // and I'll add the attribution underneath.
+    quote: {
+      line: "What we did was to survive.",
+      reply: "Well — that's enough.",
+      source: "", // e.g. "Interstellar (2014)" — left blank until confirmed
+      note: "my favourite line",
+    },
+
+    paragraphs: [
+      "I have worn multiple hats — from being a fairly successful Airbnb host with 200+ reviews, to being a fitness coach, a Math tutor, driving Uber, working as a tour guide, waiting tables in a high-end restaurant, and selling food on the street.",
+      "I took up these jobs during my career break so I wouldn't have to depend on my parents' money, though they have been supportive of all my decisions. I get impatient if I'm not doing enough with my time. I like to try new things and see where they go. I can be very pragmatic without losing the bigger vision at its core.",
+    ],
+
+    // The hats themselves. `detail` is optional.
+    hats: [
+      { label: "Airbnb host", detail: "200+ reviews", color: "bg-crayon-pink" },
+      { label: "Fitness coach", detail: "", color: "bg-crayon-yellow" },
+      { label: "Math tutor", detail: "", color: "bg-crayon-sky" },
+      { label: "Uber driver", detail: "", color: "bg-crayon-green" },
+      { label: "Tour guide", detail: "", color: "bg-crayon-yellow" },
+      { label: "Waiter", detail: "high-end restaurant", color: "bg-crayon-pink" },
+      { label: "Street food seller", detail: "", color: "bg-crayon-sky" },
+    ],
+
+    // TODO(Rupanjana): send me the article link and I'll make this clickable.
+    press: {
+      outlet: "The Economic Times",
+      what: "featured for resilience",
+      href: "",
+    },
+  },
+
   /* ---- Skills ------------------------------------------------------------ */
   skills: [
     {
@@ -136,6 +178,8 @@ export const site = {
       period: "Aug 2018 — Dec 2025",
       points: [
         "Took a structured break to prioritise mental health and long-term sustainability.",
+        "Stayed self-supporting throughout: Airbnb host with 200+ reviews, fitness coach, Math tutor, Uber driver, tour guide, waiter, and street food seller.",
+        "Featured in The Economic Times for resilience.",
       ],
     },
     {
