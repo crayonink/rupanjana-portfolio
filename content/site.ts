@@ -25,7 +25,9 @@ export const site = {
   /* ---- Contact & links --------------------------------------------------- */
   // Leave any value as an empty string "" to hide that link entirely.
   email: "mrupanjana@gmail.com",
-  phone: "+91 78278 58997", // set to "" to hide
+  // Deliberately blank: a public page gets scraped, so the number stays off it.
+  // Put it back here and the Contact section picks it up automatically.
+  phone: "",
   links: {
     github: "https://github.com/crayonink",
     linkedin: "https://linkedin.com/in/mrupanjana",

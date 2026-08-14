@@ -8,3 +8,8 @@ npm-debug.log*
 .env*.local
 next-env.d.ts
 tsconfig.tsbuildinfo
+
+# The résumé is the source for content/site.ts, but it carries a phone number
+# and is not meant to be published. Keep it local.
+Resume*.pdf
+resume*.pdf
