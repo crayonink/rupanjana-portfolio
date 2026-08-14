@@ -404,6 +404,47 @@ export function People(props: DoodleProps) {
   );
 }
 
+/** A kite, with the tail that takes up most of the page. */
+export function Kite(props: DoodleProps) {
+  const body = "M30 4 L53 35 L30 72 L7 35 Z";
+  return (
+    <Doodle {...props} viewBox="0 0 60 112">
+      <Fill d={body} color="var(--crayon-sky)" off={[3, -3]} opacity={0.6} />
+      <path d={body} stroke={props.stroke ?? "var(--crayon-blue)"} strokeWidth="3.2" />
+      <path d="M30 4 V72 M7 35 H53" stroke="var(--crayon-blue)" strokeWidth="2.4" />
+      {/* string, and the bows tied along it */}
+      <path
+        d="M30 72 Q40 84 30 92 Q20 100 30 109"
+        stroke={props.stroke ?? "var(--crayon-brown)"}
+        strokeWidth="2.4"
+      />
+      <path d="M31 84 l7 -4 M31 84 l7 4" stroke="var(--crayon-red)" strokeWidth="2.4" />
+      <path d="M27 100 l-7 -4 M27 100 l-7 4" stroke="var(--crayon-pink)" strokeWidth="2.4" />
+    </Doodle>
+  );
+}
+
+/** A snail, going about its day at the bottom of the page. */
+export function Snail(props: DoodleProps) {
+  return (
+    <Doodle {...props} viewBox="0 0 76 50">
+      <circle cx="44" cy="26" r="15" fill="var(--crayon-orange)" fillOpacity="0.5"
+        stroke={props.stroke ?? "var(--crayon-brown)"} strokeWidth="3.2" />
+      <path
+        d="M44 26 q-6 -1 -6 5 q0 6 7 6 q8 0 8 -9 q0 -10 -10 -10"
+        stroke={props.stroke ?? "var(--crayon-brown)"}
+        strokeWidth="2.4"
+      />
+      <path
+        d="M30 41 q-8 0 -12 -4 M18 37 q4 -12 12 -11 M18 37 h44"
+        stroke={props.stroke ?? "var(--crayon-brown)"}
+        strokeWidth="3.2"
+      />
+      <path d="M22 27 l-4 -9 M28 25 l1 -10" stroke="var(--crayon-brown)" strokeWidth="2.4" />
+    </Doodle>
+  );
+}
+
 /** A loose scribble, for underlining things with feeling. */
 export function Scribble(props: DoodleProps) {
   return (

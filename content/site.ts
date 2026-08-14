@@ -62,8 +62,6 @@ export const site = {
   personal: {
     eyebrow: "the unprofessional bit",
     title: "Who I am",
-    blurb:
-      "The parts that don't fit on a résumé, and matter more than the parts that do.",
 
     // TODO(Rupanjana): confirm the exact wording and tell me where it's from,
     // and I'll add the attribution underneath.

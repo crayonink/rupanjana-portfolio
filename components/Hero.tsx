@@ -8,6 +8,12 @@ import {
   Cloud,
   Bird,
   Star,
+  Kite,
+  Butterfly,
+  Flower,
+  Balloon,
+  Heart,
+  Snail,
   ArrowDoodle,
 } from "./Doodles";
 
@@ -31,16 +37,45 @@ export default function Hero() {
       className="relative overflow-hidden px-6 pt-32 pb-20 sm:pt-36"
     >
       {/* Doodles loose in the margins. Decorative, so hidden from screen readers. */}
+      {/* The sky. Everything here is decorative, kept clear of the text column
+          and the drawing card, and hidden from screen readers. */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        {/* --- top band, above the headline --- */}
         <Sun className="absolute -left-6 top-20 w-24 animate-sway sm:w-32" />
         <Cloud className="absolute right-[6%] top-16 w-32 opacity-80 sm:w-44" />
-        <Cloud className="absolute left-[38%] top-8 hidden w-28 opacity-60 lg:block" />
+        <Cloud className="absolute left-[36%] top-6 hidden w-28 opacity-60 lg:block" />
+        <Cloud className="absolute left-[13%] top-4 hidden w-20 opacity-45 xl:block" />
+        <Kite
+          className="absolute left-[21%] top-2 hidden w-14 animate-sway lg:block"
+          style={{ animationDelay: "-3s" }}
+        />
         <Bird className="absolute right-[26%] top-40 w-16 animate-float" />
         <Bird
           className="absolute right-[34%] top-52 w-12 animate-float"
           style={{ animationDelay: "-2.5s" }}
         />
+        <Bird
+          className="absolute left-[20%] top-32 hidden w-10 animate-float opacity-70 lg:block"
+          style={{ animationDelay: "-4.5s" }}
+        />
+        <Star className="absolute right-[18%] top-8 hidden w-8 animate-wiggle opacity-80 lg:block" />
+
+        {/* --- left margin, running alongside the name --- */}
+        <Balloon
+          className="absolute left-[1%] top-[42%] hidden w-12 animate-float opacity-70 xl:block"
+          style={{ animationDelay: "-1.5s" }}
+        />
+        <Heart className="absolute left-[2%] top-[64%] hidden w-8 animate-wiggle opacity-60 xl:block" />
+
+        {/* --- bottom, under the buttons --- */}
         <Star className="absolute bottom-10 left-[38%] hidden w-12 animate-wiggle lg:block" />
+        <Butterfly
+          className="absolute bottom-16 left-[44%] hidden w-14 animate-float opacity-80 lg:block"
+          style={{ animationDelay: "-3.5s" }}
+        />
+        <Flower className="absolute bottom-4 left-[46%] hidden w-10 opacity-70 lg:block" />
+        <Flower className="absolute bottom-2 left-[52%] hidden w-8 opacity-55 xl:block" />
+        <Snail className="absolute bottom-3 left-[2%] hidden w-16 opacity-70 lg:block" />
       </div>
 
       <div className="mx-auto grid w-full max-w-6xl items-center gap-14 lg:grid-cols-[1.05fr_1fr]">

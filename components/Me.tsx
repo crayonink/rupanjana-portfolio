@@ -28,11 +28,7 @@ export default function Me() {
       </div>
 
       <div className="mx-auto max-w-6xl">
-        <SectionHeading
-          eyebrow={personal.eyebrow}
-          title={personal.title}
-          blurb={personal.blurb}
-        />
+        <SectionHeading eyebrow={personal.eyebrow} title={personal.title} />
 
         {/* ---------------- The story ---------------- */}
         <div className="mt-14 max-w-3xl">
