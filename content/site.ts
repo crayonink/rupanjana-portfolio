@@ -46,6 +46,8 @@ export const site = {
       // This paragraph is optional — delete it if you'd rather not say it here.
       // Your résumé names the break openly, so the site does too.
       "I took a long break between 2018 and 2025 for my mental health. I'm not shy about it: it's the reason I build the way I do now — sustainably, honestly, and with a lot of care for the humans on the other side of the system.",
+      "I have worn multiple hats — from being a fairly successful Airbnb host with 200+ reviews, to being a fitness coach, a Math tutor, riding for Uber, working as a tour guide, waiting tables in a high-end restaurant, and selling food on the street.",
+      "I took up these jobs during my career break so I wouldn't have to depend on my parents' money, though they have been supportive of all my decisions. I get impatient if I'm not doing enough with my time. I like to try new things and see where they go. I can be very pragmatic without losing the bigger vision at its core.",
       "Away from the terminal I read, box, play football, and wishlist Airbnbs. Right now I'm reading Vijaya Maria.",
     ],
     // Small stat cards. Keep to 3 — they look best in a row.
@@ -93,10 +95,9 @@ export const site = {
   /* ---- Who I am ---------------------------------------------------------- */
   // The personal section. Everything here is yours to rewrite — it's the one
   // part of the site that isn't sourced from the résumé.
+  // Rendered inside the About section — the two used to be separate sections
+  // ("About me" and "Who I am") doing the same job under different labels.
   personal: {
-    eyebrow: "the unprofessional bit",
-    title: "Who I am",
-
     // TODO(Rupanjana): confirm the exact wording and tell me where it's from,
     // and I'll add the attribution underneath.
     quote: {
@@ -105,11 +106,6 @@ export const site = {
       source: "", // e.g. "Interstellar (2014)" — left blank until confirmed
       note: "my favourite line",
     },
-
-    paragraphs: [
-      "I have worn multiple hats — from being a fairly successful Airbnb host with 200+ reviews, to being a fitness coach, a Math tutor, riding for Uber, working as a tour guide, waiting tables in a high-end restaurant, and selling food on the street.",
-      "I took up these jobs during my career break so I wouldn't have to depend on my parents' money, though they have been supportive of all my decisions. I get impatient if I'm not doing enough with my time. I like to try new things and see where they go. I can be very pragmatic without losing the bigger vision at its core.",
-    ],
 
     // The hats themselves. `detail` is optional.
     hats: [

@@ -8,7 +8,6 @@ const SECTIONS = [
   { id: "building", label: "Kokum Wire" },
   { id: "work", label: "Work" },
   { id: "about", label: "About" },
-  { id: "me", label: "Me" },
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
   { id: "contact", label: "Contact" },

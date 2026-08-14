@@ -1,7 +1,17 @@
 import { site } from "@/content/site";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
-import { House, Tree, Flower, Heart, Rainbow, Grass, Sun } from "./Doodles";
+import {
+  House,
+  Tree,
+  Flower,
+  Heart,
+  Rainbow,
+  Grass,
+  Sun,
+  Star,
+  Butterfly,
+} from "./Doodles";
 
 /** The little gallery of drawings taped up next to the story. */
 function FridgeArt() {
@@ -35,25 +45,39 @@ function FridgeArt() {
   );
 }
 
+/** Each hat sits at its own angle, like labels scrawled at speed. */
+const HAT_TILTS = [
+  "-rotate-2",
+  "rotate-1",
+  "rotate-[2.5deg]",
+  "-rotate-1",
+  "rotate-2",
+  "-rotate-[2.5deg]",
+  "rotate-[0.5deg]",
+];
+
 export default function About() {
+  const { personal } = site;
+  const { quote, press } = personal;
+
   return (
     <section id="about" className="relative px-6 py-24 sm:py-32">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <Sun className="absolute right-[5%] top-12 w-20 animate-sway opacity-70" />
+        {/* Negative offset keeps it outside the text column, which starts at
+            the max-w-6xl gutter — left-[3%] put it right on the paragraphs. */}
+        <Butterfly className="absolute -left-3 top-[44%] hidden w-14 animate-float opacity-70 lg:block" />
         <Grass className="absolute inset-x-0 bottom-0 h-8 w-full opacity-40" />
       </div>
 
       <div className="mx-auto max-w-6xl">
-        <SectionHeading
-          eyebrow="who's behind all this"
-          title="About me"
-        />
+        <SectionHeading eyebrow="who's behind all this" title="About me" />
 
         <div className="mt-16 grid items-start gap-14 lg:grid-cols-[1.15fr_1fr]">
           {/* ---------------- The story ---------------- */}
           <div>
             {site.about.paragraphs.map((para, i) => (
-              <Reveal key={i} delay={i * 80}>
+              <Reveal key={i} delay={i * 70}>
                 <p className="mb-5 text-lg leading-relaxed text-ink-soft">
                   {para}
                 </p>
@@ -88,9 +112,7 @@ export default function About() {
                   <p className="font-display text-2xl leading-tight text-ink">
                     {site.education.degree}
                   </p>
-                  <p className="mt-1 text-ink-soft">
-                    {site.education.school}
-                  </p>
+                  <p className="mt-1 text-ink-soft">{site.education.school}</p>
                   <p className="font-hand mt-1 text-lg text-crayon-blue">
                     {site.education.period}
                   </p>
@@ -104,6 +126,79 @@ export default function About() {
             <p className="margin-note mb-5">the gallery ↓</p>
             <FridgeArt />
           </div>
+        </div>
+
+        {/* ---------------- The hats ---------------- */}
+        <Reveal delay={120}>
+          {/* mb-8, not mb-5: the note is rotated, so its corner dips lower
+              than its line box and clips the first chip at tighter spacing. */}
+          <p className="margin-note mt-16 mb-8">every hat, so far ↓</p>
+          <ul className="flex flex-wrap gap-4">
+            {personal.hats.map((hat, i) => (
+              <li
+                key={hat.label}
+                className={`crayon-chip sticker-sm ${hat.color} ${
+                  HAT_TILTS[i % HAT_TILTS.length]
+                } px-5 py-2.5 text-ink transition-transform duration-300 hover:rotate-0 hover:-translate-y-1`}
+              >
+                <span className="font-display text-xl leading-none">
+                  {hat.label}
+                </span>
+                {hat.detail && (
+                  <span className="font-hand ml-2 text-lg text-ink-soft">
+                    {hat.detail}
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+
+        {/* ---------------- Press + the line ---------------- */}
+        <div className="mt-14 grid items-stretch gap-8 lg:grid-cols-[1fr_1.35fr]">
+          <Reveal>
+            <figure className="taped sticker crayon-box-alt flex h-full -rotate-1 flex-col justify-center bg-paper p-8 text-center">
+              <Star className="mx-auto w-12" />
+              <p className="mt-4 font-display text-3xl leading-tight text-ink">
+                {press.outlet}
+              </p>
+              <p className="mt-2 font-hand text-xl text-crayon-blue">
+                {press.what}
+              </p>
+              {press.href && (
+                <a
+                  href={press.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 font-display text-lg text-crayon-red underline decoration-wavy underline-offset-4"
+                >
+                  read it
+                </a>
+              )}
+            </figure>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <figure className="sticker crayon-box flex h-full rotate-1 flex-col justify-center bg-crayon-yellow/25 px-8 py-10 text-center sm:px-12">
+              <blockquote className="font-display text-[clamp(1.6rem,3.4vw,2.4rem)] leading-[1.2] text-ink">
+                <p>&ldquo;{quote.line}&rdquo;</p>
+                <p className="mt-3 text-crayon-red">
+                  &ldquo;{quote.reply}&rdquo;
+                </p>
+              </blockquote>
+              <figcaption className="mt-6 flex flex-wrap items-center justify-center gap-2">
+                <Heart className="w-6" fine />
+                <span className="font-hand text-xl text-crayon-blue">
+                  {quote.note}
+                </span>
+                {quote.source && (
+                  <cite className="font-hand text-xl not-italic text-muted">
+                    — {quote.source}
+                  </cite>
+                )}
+              </figcaption>
+            </figure>
+          </Reveal>
         </div>
       </div>
     </section>
