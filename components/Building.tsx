@@ -24,7 +24,7 @@ export default function Building() {
           <div className="crayon-box sticker relative mt-14 -rotate-1 bg-crayon-sky/20 p-8 transition-transform duration-300 hover:rotate-0 sm:p-12">
             <Star className="absolute -right-5 -top-6 w-16 animate-wiggle" />
 
-            <p className="font-hand text-2xl text-crayon-blue">{v.company}</p>
+            <p className="font-hand text-2xl text-crayon-blue">{v.kicker}</p>
 
             <h3 className="mt-2 font-display text-[clamp(1.9rem,4.2vw,3rem)] leading-tight text-ink">
               {v.headline}
@@ -52,7 +52,7 @@ export default function Building() {
                 rel="noopener noreferrer"
                 className="crayon-chip sticker-sm mt-8 inline-flex rotate-1 items-center gap-2 bg-crayon-yellow px-7 py-3 font-display text-2xl text-ink transition-transform hover:-rotate-1 hover:-translate-y-1"
               >
-                See Kokum Wire
+                {v.ctaLabel}
                 <ArrowDoodle className="w-7" stroke="var(--color-ink)" fine />
               </a>
             )}

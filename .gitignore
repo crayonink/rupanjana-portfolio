@@ -13,3 +13,9 @@ tsconfig.tsbuildinfo
 # and is not meant to be published. Keep it local.
 Resume*.pdf
 resume*.pdf
+
+# The resume source carries her phone number - stays local, like the PDF.
+resume/
+
+# The Veyora services one-pager carries the phone number too.
+VeyoraSystems.pdf

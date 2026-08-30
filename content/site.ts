@@ -1,22 +1,22 @@
 /* ============================================================================
  *  EDIT THIS FILE — and only this file — to change everything on the site.
- *  Content is drawn from Rupanjana's résumé (ResumeRupaDesigned.pdf).
+ *  Content follows the résumé at resume/resume.html — keep the two in step.
  *  Save the file and the browser refreshes on its own.
  * ==========================================================================*/
 
 export const site = {
   /* ---- Basics ------------------------------------------------------------ */
   name: "Rupanjana Mitra",
-  role: "Founder & Backend Engineer",
+  role: "Independent Contractor & Backend Engineer",
   tagline:
-    "Founder of Kokum Labs, building Kokum Wire — supply chain intelligence for semiconductor procurement",
+    "Independent contractor — I design, build and run software for organisations that need it done right the first time",
   location: "Panjim, India",
   intro:
-    "I build backend systems that standardise messy manufacturing workflows. Right now that's Kokum Wire, which tells chip buyers what just changed in their supply chain — with dates and sources — and what to do about it.",
+    "I build backend systems that hold up in production — pricing engines, approval flows, payment reconciliation. I now do that independently, taking software from the first conversation through to the on-call rota.",
 
   /* ---- Hero rotating words ----------------------------------------------- */
   rotatingWords: [
-    "supply chain intelligence",
+    "software that holds up",
     "pricing engines",
     "systems with real users",
     "things that ship",
@@ -43,11 +43,10 @@ export const site = {
     paragraphs: [
       "I'm a backend engineer. Most of what I've built lives out of sight: pricing engines, approval flows, payment reconciliation — the machinery underneath a business, where being wrong is expensive and being unpredictable is worse.",
       "My favourite kind of work is taking something error-prone and manual and making it deterministic. At Encon I replaced spreadsheet-driven costing with real systems, and watched offer turnaround drop by 70% and manual errors by 75%. I own the whole lifecycle — architecture, deployment, monitoring, and the 2am pages.",
-      // This paragraph is optional — delete it if you'd rather not say it here.
-      // Your résumé names the break openly, so the site does too.
-      "I took a long break between 2018 and 2025 for my mental health. I'm not shy about it: it's the reason I build the way I do now — sustainably, honestly, and with a lot of care for the humans on the other side of the system.",
-      "I have worn multiple hats — from being a fairly successful Airbnb host with 200+ reviews, to being a fitness coach, a Math tutor, riding for Uber, working as a tour guide, waiting tables in a high-end restaurant, and selling food on the street.",
-      "I took up these jobs during my career break so I wouldn't have to depend on my parents' money, though they have been supportive of all my decisions. I get impatient if I'm not doing enough with my time. I like to try new things and see where they go. I can be very pragmatic without losing the bigger vision at its core.",
+      "In August 2026 I left that job to work independently. I take on other people's projects end to end — discovery, build, launch, and the support rota afterwards.",
+      "Between 2018 and 2025 I built and ran a tourism business — a portfolio of Airbnb properties and a walking tour agency. Years of hosting people is the reason I build the way I do now: sustainably, honestly, and with a lot of care for the humans on the other side of the system.",
+      "I have worn multiple hats — from being a fairly successful Airbnb host with 500+ reviews across Airbnb and Google, to being a fitness coach, a Math tutor, riding for Uber, working as a tour guide, waiting tables in a high-end restaurant, and selling food on the street.",
+      "I took up these jobs alongside the business so I wouldn't have to depend on my parents' money, though they have been supportive of all my decisions. I get impatient if I'm not doing enough with my time. I like to try new things and see where they go. I can be very pragmatic without losing the bigger vision at its core.",
       "Away from the terminal I read, box, play football, and wishlist Airbnbs. Right now I'm reading Vijaya Maria.",
     ],
     // Small stat cards. Keep to 3 — they look best in a row.
@@ -59,35 +58,51 @@ export const site = {
   },
 
   /* ---- What I'm building ------------------------------------------------- */
-  // The headline act. Copy is drawn from wire.kokumlabs.in — check the wording
-  // still matches the product before you send this to anyone who matters.
+  // The headline act. The service copy came from the one-pager
+  // (VeyoraSystems.pdf), but this is sold as her own contracting work now —
+  // no company name anywhere, so keep the brand out when editing.
   venture: {
-    eyebrow: "what I'm building right now",
-    company: "Kokum Labs",
-    product: "Kokum Wire",
-    headline: "Supply Chain Intelligence for Semiconductor Procurement",
+    eyebrow: "what I do now",
+    kicker: "independent contracting",
+    product: "Contract engineering",
+    headline: "I design, build and run software, end to end",
     pitch:
-      "Kokum Wire watches the chip supply chain and tells you — with dates and sources — what just changed and what to do about it.",
-    body: "It reads the signals that move semiconductor supply before they show up in a price: earnings calls, export data, equipment orders, hiring trends, government filings. Then it condenses them into something a buyer can act on. Every verdict is dated and sourced.",
+      "I build software for organisations that need it done right the first time.",
+    body: "One engineer covers the whole lifecycle — architecture, build, deployment and ongoing care — so there are no hand-offs and no surprises. Every engagement opens with a short fixed-price discovery and a scoped plan you can take anywhere. I build in two-week cycles, each ending in a working demo, and at launch the code, credentials and runbooks are yours.",
     // The one-line positioning shorthand. Set to "" to hide it.
-    compare: "Think Prewave, but more niche.",
-    href: "https://wire.kokumlabs.in",
+    compare: "",
+    // Button label and destination. Leave href "" until the site is live and
+    // the button hides itself.
+    ctaLabel: "Start a project",
+    href: "",
     features: [
       {
-        title: "Ask the ledger",
-        body: "Query what changed in the supply chain, in plain language.",
+        title: "API & backend development",
+        body: "Documented REST/GraphQL APIs, integrations and background processing.",
       },
       {
-        title: "Synthesis desk",
-        body: "Cross-reference scattered signals into a single read.",
+        title: "Custom web apps",
+        body: "SaaS platforms, portals and internal tools, from architecture to deployment.",
       },
       {
-        title: "Decision desk",
-        body: "Weigh buy timing against inventory, allocation and pricing.",
+        title: "Cloud & DevOps",
+        body: "AWS/GCP/Azure infrastructure, CI/CD, monitoring and cost control.",
       },
       {
-        title: "Chip origin map",
-        body: "See where parts are actually made, and which suppliers are under stress.",
+        title: "Data & analytics",
+        body: "Warehousing, pipelines and dashboards your team will actually use.",
+      },
+      {
+        title: "AI / ML integration",
+        body: "Assistants, document processing and search, integrated pragmatically.",
+      },
+      {
+        title: "Consulting & audits",
+        body: "Architecture reviews, code audits and technical due diligence.",
+      },
+      {
+        title: "Maintenance & support",
+        body: "Retainers with guaranteed response times, monitoring and improvements.",
       },
     ],
   },
@@ -109,7 +124,7 @@ export const site = {
 
     // The hats themselves. `detail` is optional.
     hats: [
-      { label: "Airbnb host", detail: "200+ reviews", color: "bg-crayon-pink" },
+      { label: "Airbnb host", detail: "500+ reviews, Airbnb + Google", color: "bg-crayon-pink" },
       { label: "Fitness coach", detail: "", color: "bg-crayon-yellow" },
       { label: "Math tutor", detail: "", color: "bg-crayon-sky" },
       { label: "Uber bike rider", detail: "", color: "bg-crayon-green" },
@@ -136,7 +151,7 @@ export const site = {
   skills: [
     {
       group: "Languages",
-      items: ["Python", "Java", "SQL", "JavaScript", "C++"],
+      items: ["Java", "Python", "C++", "SQL", "JavaScript"],
     },
     {
       group: "Frameworks",
@@ -155,7 +170,8 @@ export const site = {
   /* ---- Projects ---------------------------------------------------------- */
   // `featured: true` gives a project a larger card.
   // Shipped-and-in-use first, then the ones built to learn. The Encon systems
-  // are the ones with users and numbers attached, so they lead.
+  // are the ones with users and numbers attached, so they lead. GSoC is not
+  // here on purpose — it is an Experience entry, the way the résumé has it.
   // TODO(Rupanjana): check the two Encon descriptions match what they really do.
   projects: [
     {
@@ -203,42 +219,47 @@ export const site = {
       year: "2026",
       featured: false,
     },
-    {
-      title: "KDE Sheets — Google Summer of Code",
-      blurb:
-        "Built user-facing UI features for KDE Sheets as a Google Summer of Code intern, working with open-source maintainers across the world on feature design and code review.",
-      tags: ["C++", "KDE", "Open Source"],
-      impact: "",
-      href: "",
-      repo: "",
-      year: "2014",
-      featured: false,
-    },
   ],
 
   /* ---- Experience -------------------------------------------------------- */
   // Most recent first. Delete the whole array to hide this section.
   experience: [
     {
+      role: "Independent Contractor — Backend & Systems",
+      // Not blank: an empty company marks the career-break card in Experience.tsx.
+      company: "Freelance",
+      place: "Panjim, India (remote)",
+      period: "Aug 2026 — Present",
+      points: [
+        "Contract backend and systems engineering: custom web apps, APIs and backend, cloud and DevOps, data and AI integration.",
+        "Own architecture, build, deployment and monitoring on every client project.",
+        "Run engagements end to end — fixed-price discovery, two-week build cycles, staged launch, and maintenance retainers.",
+      ],
+    },
+    {
       role: "Senior Software Engineer — Backend & Systems",
       company: "Encon Thermal Engineering Pvt. Ltd.",
       place: "Panjim, India",
-      period: "Jan 2026 — Present",
+      period: "Jan 2026 — Aug 2026",
       points: [
-        "Designed and deployed backend systems replacing spreadsheet-driven costing and offer workflows.",
+        "Designed and deployed the Offer Generator and RFQ Tracker, replacing spreadsheet-driven costing and offer workflows.",
         "Reduced offer turnaround time by 70% and manual errors by 75%.",
         "Owned system architecture, deployment, monitoring, and operational support.",
         "Worked closely with business stakeholders to translate pricing and commercial requirements into system design.",
       ],
     },
     {
-      role: "Career Break — Mental Health & Well-Being",
-      company: "",
-      place: "",
+      // TODO(Rupanjana): if the tourism business has a registered name, send it
+      // and it replaces the description in `company` on both the site and the
+      // résumé.
+      role: "Founder — Tourism & Hospitality",
+      company: "Airbnb portfolio & walking tour agency",
+      place: "Shantiniketan, India",
       period: "Aug 2018 — Dec 2025",
       points: [
-        "Took a structured break to prioritise mental health and long-term sustainability.",
-        "Stayed self-supporting throughout: Airbnb host with 200+ reviews, fitness coach, Math tutor, Uber bike rider, tour guide, waiter, and street food seller.",
+        "Founded and ran a tourism business — a portfolio of Airbnb properties and a walking tour agency.",
+        "Hosted guests across multiple listings, earning 500+ reviews across Airbnb and Google.",
+        "Built and led the walking tour side end to end — itineraries, bookings, and guiding.",
         "Featured in The Economic Times for resilience.",
       ],
     },
@@ -275,8 +296,8 @@ export const site = {
 
   /* ---- Contact section text ---------------------------------------------- */
   contact: {
-    heading: "Come talk to me about chips",
-    body: "I'm building Kokum Wire. If you buy semiconductors, invest in the people who do, or just want to argue about supply chain data — I'd like to hear from you. Email me, or let's get on a Google Meet.",
+    heading: "Tell me what you're building",
+    body: "I'm taking on new contract work. Tell me what you're building and I'll come back within two business days with an honest read on scope, timeline and cost. Email me, or let's get on a Google Meet.",
   },
 };
 

@@ -27,9 +27,9 @@ export default function Experience() {
           />
 
           {site.experience.map((job, i) => {
-            // The career break has no employer — it gets a gentler card, and a
-            // heart instead of a bullet. It belongs on the timeline like
-            // anything else that shaped how she works.
+            // A role with no employer gets a gentler card and a heart instead of
+            // a bullet. Nothing uses it since the 2018–2025 entry became the
+            // tourism business, but it is kept for whatever needs it next.
             const isBreak = !job.company;
 
             return (
