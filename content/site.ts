@@ -43,10 +43,8 @@ export const site = {
     paragraphs: [
       "I'm a backend engineer. Most of what I've built lives out of sight: pricing engines, approval flows, payment reconciliation — the machinery underneath a business, where being wrong is expensive and being unpredictable is worse.",
       "My favourite kind of work is taking something error-prone and manual and making it deterministic. At Encon I replaced spreadsheet-driven costing with real systems, and watched offer turnaround drop by 70% and manual errors by 75%. I own the whole lifecycle — architecture, deployment, monitoring, and the 2am pages.",
-      "In August 2026 I left that job to work independently. I take on other people's projects end to end — discovery, build, launch, and the support rota afterwards.",
+      "In August 2026, I left Encon to work independently. I now take on other people's projects end to end — discovery, build, launch, and the support that follows.",
       "Between 2018 and 2025 I built and ran a tourism business — a portfolio of Airbnb properties and a walking tour agency. Years of hosting people is the reason I build the way I do now: sustainably, honestly, and with a lot of care for the humans on the other side of the system.",
-      "I have worn multiple hats — from being a fairly successful Airbnb host with 500+ reviews across Airbnb and Google, to being a fitness coach, a Math tutor, riding for Uber, working as a tour guide, waiting tables in a high-end restaurant, and selling food on the street.",
-      "I took up these jobs alongside the business so I wouldn't have to depend on my parents' money, though they have been supportive of all my decisions. I get impatient if I'm not doing enough with my time. I like to try new things and see where they go. I can be very pragmatic without losing the bigger vision at its core.",
       "Away from the terminal I read, box, play football, and wishlist Airbnbs. Right now I'm reading Vijaya Maria.",
     ],
     // Small stat cards. Keep to 3 — they look best in a row.
@@ -126,11 +124,7 @@ export const site = {
     hats: [
       { label: "Airbnb host", detail: "500+ reviews, Airbnb + Google", color: "bg-crayon-pink" },
       { label: "Fitness coach", detail: "", color: "bg-crayon-yellow" },
-      { label: "Math tutor", detail: "", color: "bg-crayon-sky" },
-      { label: "Uber bike rider", detail: "", color: "bg-crayon-green" },
-      { label: "Tour guide", detail: "", color: "bg-crayon-yellow" },
-      { label: "Waiter", detail: "high-end restaurant", color: "bg-crayon-pink" },
-      { label: "Street food seller", detail: "", color: "bg-crayon-sky" },
+      { label: "Software engineer", detail: "", color: "bg-crayon-sky" },
     ],
 
     // A thing she likes knowing. Set `text` to "" to hide the card.
