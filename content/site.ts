@@ -12,7 +12,7 @@ export const site = {
     "Cofounder at Kokum Labs, building payments infrastructure: merchant onboarding without the document back-and-forth, and payment rails for AI agents",
   location: "Panjim, India",
   intro:
-    "I build backend systems that hold up in production: pricing engines, approval flows, payment reconciliation. I founded a fintech firm.",
+    "I build backend systems that hold up in production: pricing engines, approval flows, payment reconciliation. I founded Kokum Labs, a fintech firm.",
 
   /* ---- Hero rotating words ----------------------------------------------- */
   rotatingWords: [
