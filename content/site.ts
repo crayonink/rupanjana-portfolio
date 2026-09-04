@@ -172,25 +172,28 @@ export const site = {
       featured: true,
     },
     {
-      title: "Pricing & Workflow Engine",
+      title: "KDE Sheets UI features",
       blurb:
-        "A rule-based pricing and multi-step approval engine, built to get the data modelling right: configurable rules, validation layers, and deterministic processing so a wrong number cannot get through.",
-      tags: ["Java", "Spring Boot", "PostgreSQL"],
+        "User-facing UI features for KDE Sheets, the spreadsheet application in the KDE suite. Built during Google Summer of Code, with feature design and code review by the upstream maintainers.",
+      tags: ["C++", "Qt"],
       impact: "",
       href: "",
       repo: "",
-      year: "2026",
+      year: "2014",
       featured: false,
     },
     {
-      title: "Payment Processing & Reconciliation Service",
+      // TODO(Rupanjana): send me the stack, the year and a link and I will
+      // fill in `tags`, `year` and `href`. Left thin on purpose rather than
+      // guessed at.
+      title: "OneBusAway web application",
       blurb:
-        "Payment flows end to end: order creation, initiation, status tracking. Idempotent APIs so retries never double-charge, and asynchronous reconciliation that pulls system and payment state back together after failure.",
-      tags: ["Java", "Spring Boot", "PostgreSQL"],
+        "A web application for OneBusAway, the open-source real-time transit information system.",
+      tags: [],
       impact: "",
       href: "",
       repo: "",
-      year: "2026",
+      year: "",
       featured: false,
     },
   ],
