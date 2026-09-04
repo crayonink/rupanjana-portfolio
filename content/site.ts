@@ -65,7 +65,7 @@ export const site = {
     product: "Kokum Labs",
     headline: "Payments infrastructure, for humans and for agents",
     pitch:
-      "I cofounded Kokum Labs to fix two things in payments that everyone works around instead of solving.",
+      "I cofounded Kokum Labs because I want to go deep into fintech.",
     body: "The first is merchant onboarding: getting verified by a payment gateway still means a document back-and-forth that stalls for weeks. We are building an agent that handles it. The second is agent pay. AI agents can now decide to buy something, but there are no rails for them to actually transact on. We are building those.",
     // The one-line positioning shorthand. Set to "" to hide it.
     compare: "",
