@@ -122,7 +122,7 @@ export default function Contact() {
           {calendly && (
             <div className="mt-7">
               <p className="font-hand text-xl text-ink-soft">
-                or let&rsquo;s get on a Google Meet —
+                or get on a Google Meet with me
               </p>
               <a
                 href={calendly}

@@ -7,12 +7,12 @@
 export const site = {
   /* ---- Basics ------------------------------------------------------------ */
   name: "Rupanjana Mitra",
-  role: "Independent Contractor & Backend Engineer",
+  role: "Cofounder at Kokum Labs",
   tagline:
-    "Independent contractor — I design, build and run software for organisations that need it done right the first time",
+    "Cofounder at Kokum Labs, building payments infrastructure: merchant onboarding without the document back-and-forth, and payment rails for AI agents",
   location: "Panjim, India",
   intro:
-    "I build backend systems that hold up in production — pricing engines, approval flows, payment reconciliation. I now do that independently, taking software from the first conversation through to the on-call rota.",
+    "I build backend systems that hold up in production: pricing engines, approval flows, payment reconciliation. I now do that at Kokum Labs, which I cofounded, taking software from the first conversation through to the on-call rota.",
 
   /* ---- Hero rotating words ----------------------------------------------- */
   rotatingWords: [
@@ -41,11 +41,11 @@ export const site = {
   /* ---- About ------------------------------------------------------------- */
   about: {
     paragraphs: [
-      "I'm a backend engineer. Most of what I've built lives out of sight: pricing engines, approval flows, payment reconciliation — the machinery underneath a business, where being wrong is expensive and being unpredictable is worse.",
-      "My favourite kind of work is taking something error-prone and manual and making it deterministic. At Encon I replaced spreadsheet-driven costing with real systems, and watched offer turnaround drop by 70% and manual errors by 75%. I own the whole lifecycle — architecture, deployment, monitoring, and the 2am pages.",
-      "In August 2026, I left Encon to work independently. I now take on other people's projects end to end — discovery, build, launch, and the support that follows.",
-      "Between 2018 and 2025 I built and ran a tourism business — a portfolio of Airbnb properties and a walking tour agency. Years of hosting people is the reason I build the way I do now: sustainably, honestly, and with a lot of care for the humans on the other side of the system.",
-      "Away from the terminal I read, box, play football, and wishlist Airbnbs. Right now I'm reading Vijaya Maria.",
+      "I am a backend engineer. Most of what I have built lives out of sight: pricing engines, approval flows, payment reconciliation. It is the machinery underneath a business, where being wrong is expensive and being unpredictable is worse.",
+      "My favourite kind of work is taking something error-prone and manual and making it deterministic. At Encon I replaced spreadsheet-driven costing with real systems, and watched offer turnaround drop by 70% and manual errors by 75%. I own the whole lifecycle: architecture, deployment, monitoring, and the 2am pages.",
+      "In August 2026, I left Encon to cofound Kokum Labs. We are working on two problems in payments. The first is merchant onboarding, where an agent removes the document back-and-forth in merchant verification. The second is agent pay, the payment infrastructure AI agents need to transact.",
+      "Between 2018 and 2025 I built and ran a tourism business: a portfolio of Airbnb properties and a walking tour agency. Years of hosting people is the reason I build the way I do now: sustainably, honestly, and with a lot of care for the humans on the other side of the system.",
+      "Away from the terminal I read, box, play football, and wishlist Airbnbs. Right now I am reading Vijaya Maria.",
     ],
     // Small stat cards. Keep to 3 — they look best in a row.
     stats: [
@@ -56,51 +56,31 @@ export const site = {
   },
 
   /* ---- What I'm building ------------------------------------------------- */
-  // The headline act. The service copy came from the one-pager
-  // (VeyoraSystems.pdf), but this is sold as her own contracting work now —
-  // no company name anywhere, so keep the brand out when editing.
+  // The headline act — Kokum Labs, the company she cofounded in Aug 2026.
+  // Only the two workstreams below are confirmed; don't add products or
+  // client-services copy that hasn't been stated.
   venture: {
     eyebrow: "what I do now",
-    kicker: "independent contracting",
-    product: "Contract engineering",
-    headline: "I design, build and run software, end to end",
+    kicker: "kokum labs",
+    product: "Kokum Labs",
+    headline: "Payments infrastructure, for humans and for agents",
     pitch:
-      "I build software for organisations that need it done right the first time.",
-    body: "One engineer covers the whole lifecycle — architecture, build, deployment and ongoing care — so there are no hand-offs and no surprises. Every engagement opens with a short fixed-price discovery and a scoped plan you can take anywhere. I build in two-week cycles, each ending in a working demo, and at launch the code, credentials and runbooks are yours.",
+      "I cofounded Kokum Labs to fix two things in payments that everyone works around instead of solving.",
+    body: "The first is merchant onboarding: getting verified by a payment gateway still means a document back-and-forth that stalls for weeks. We are building an agent that handles it. The second is agent pay. AI agents can now decide to buy something, but there are no rails for them to actually transact on. We are building those.",
     // The one-line positioning shorthand. Set to "" to hide it.
     compare: "",
     // Button label and destination. Leave href "" until the site is live and
     // the button hides itself.
-    ctaLabel: "Start a project",
+    ctaLabel: "Get in touch",
     href: "",
     features: [
       {
-        title: "API & backend development",
-        body: "Documented REST/GraphQL APIs, integrations and background processing.",
+        title: "Merchant onboarding",
+        body: "An agent that removes the document back-and-forth in merchant verification for payment gateways.",
       },
       {
-        title: "Custom web apps",
-        body: "SaaS platforms, portals and internal tools, from architecture to deployment.",
-      },
-      {
-        title: "Cloud & DevOps",
-        body: "AWS/GCP/Azure infrastructure, CI/CD, monitoring and cost control.",
-      },
-      {
-        title: "Data & analytics",
-        body: "Warehousing, pipelines and dashboards your team will actually use.",
-      },
-      {
-        title: "AI / ML integration",
-        body: "Assistants, document processing and search, integrated pragmatically.",
-      },
-      {
-        title: "Consulting & audits",
-        body: "Architecture reviews, code audits and technical due diligence.",
-      },
-      {
-        title: "Maintenance & support",
-        body: "Retainers with guaranteed response times, monitoring and improvements.",
+        title: "Agent pay",
+        body: "Payment infrastructure that lets AI agents transact.",
       },
     ],
   },
@@ -115,7 +95,7 @@ export const site = {
     // and I'll add the attribution underneath.
     quote: {
       line: "What we did was to survive.",
-      reply: "Well — that's enough.",
+      reply: "Well, that is enough.",
       source: "", // e.g. "Interstellar (2014)" — left blank until confirmed
       note: "my favourite line",
     },
@@ -130,7 +110,7 @@ export const site = {
     // A thing she likes knowing. Set `text` to "" to hide the card.
     fact: {
       label: "a thing I like knowing",
-      text: "Arabs who settled along the Konkan coast married local women, and their descendants became the Navayathis — a community of traders, and very good sailors.",
+      text: "Arabs who settled along the Konkan coast married local women, and their descendants became the Navayathis, a community of traders, and very good sailors.",
     },
 
     // TODO(Rupanjana): send me the article link and I'll make this clickable.
@@ -183,7 +163,7 @@ export const site = {
     {
       title: "RFQ Tracker",
       blurb:
-        "Tracks requests for quotation through the whole commercial pipeline — intake, costing, approval, response — so nothing stalls silently and everyone can see where a quote actually is.",
+        "Tracks requests for quotation through the whole commercial pipeline, from intake and costing through to approval and response, so nothing stalls silently and everyone can see where a quote actually is.",
       tags: ["Python", "FastAPI", "PostgreSQL"],
       impact: "Running in production at Encon.",
       href: "",
@@ -194,7 +174,7 @@ export const site = {
     {
       title: "Pricing & Workflow Engine",
       blurb:
-        "A rule-based pricing and multi-step approval engine, built to get the data modelling right: configurable rules, validation layers, and deterministic processing so a wrong number can't get through.",
+        "A rule-based pricing and multi-step approval engine, built to get the data modelling right: configurable rules, validation layers, and deterministic processing so a wrong number cannot get through.",
       tags: ["Java", "Spring Boot", "PostgreSQL"],
       impact: "",
       href: "",
@@ -205,7 +185,7 @@ export const site = {
     {
       title: "Payment Processing & Reconciliation Service",
       blurb:
-        "Payment flows end to end — order creation, initiation, status tracking. Idempotent APIs so retries never double-charge, and asynchronous reconciliation that pulls system and payment state back together after failure.",
+        "Payment flows end to end: order creation, initiation, status tracking. Idempotent APIs so retries never double-charge, and asynchronous reconciliation that pulls system and payment state back together after failure.",
       tags: ["Java", "Spring Boot", "PostgreSQL"],
       impact: "",
       href: "",
@@ -219,22 +199,20 @@ export const site = {
   // Most recent first. Delete the whole array to hide this section.
   experience: [
     {
-      role: "Independent Contractor — Backend & Systems",
-      // Not blank: an empty company marks the career-break card in Experience.tsx.
-      company: "Freelance",
-      place: "Panjim, India (remote)",
-      period: "Aug 2026 — Present",
+      role: "Cofounder",
+      company: "Kokum Labs",
+      place: "Panjim, Goa, India (remote)",
+      period: "Aug 2026 to Present",
       points: [
-        "Contract backend and systems engineering: custom web apps, APIs and backend, cloud and DevOps, data and AI integration.",
-        "Own architecture, build, deployment and monitoring on every client project.",
-        "Run engagements end to end — fixed-price discovery, two-week build cycles, staged launch, and maintenance retainers.",
+        "Solving the merchant onboarding problem for payment gateways: building an agent that removes the document back-and-forth in merchant verification.",
+        "Solving agent pay: payment infrastructure for AI agents to transact.",
       ],
     },
     {
-      role: "Senior Software Engineer — Backend & Systems",
+      role: "Senior Software Engineer, Backend & Systems",
       company: "Encon Thermal Engineering Pvt. Ltd.",
       place: "Panjim, India",
-      period: "Jan 2026 — Aug 2026",
+      period: "Jan 2026 to Aug 2026",
       points: [
         "Designed and deployed the Offer Generator and RFQ Tracker, replacing spreadsheet-driven costing and offer workflows.",
         "Reduced offer turnaround time by 70% and manual errors by 75%.",
@@ -246,14 +224,14 @@ export const site = {
       // TODO(Rupanjana): if the tourism business has a registered name, send it
       // and it replaces the description in `company` on both the site and the
       // résumé.
-      role: "Founder — Tourism & Hospitality",
+      role: "Founder, Tourism & Hospitality",
       company: "Airbnb portfolio & walking tour agency",
       place: "Shantiniketan, India",
-      period: "Aug 2018 — Dec 2025",
+      period: "Aug 2018 to Dec 2025",
       points: [
-        "Founded and ran a tourism business — a portfolio of Airbnb properties and a walking tour agency.",
+        "Founded and ran a tourism business: a portfolio of Airbnb properties and a walking tour agency.",
         "Hosted guests across multiple listings, earning 500+ reviews across Airbnb and Google.",
-        "Built and led the walking tour side end to end — itineraries, bookings, and guiding.",
+        "Built and led the walking tour side end to end: itineraries, bookings, and guiding.",
         "Featured in The Economic Times for resilience.",
       ],
     },
@@ -261,19 +239,19 @@ export const site = {
       role: "Software Engineer",
       company: "BillDesk",
       place: "Mumbai, India",
-      period: "Jan 2016 — Jul 2018",
+      period: "Jan 2016 to Jul 2018",
       // Closes the May-2015-to-Jan-2016 gap, which otherwise reads as unexplained.
-      note: "Offer in hand on graduating; BillDesk's joining date was January 2016.",
+      note: "Offer in hand on graduating; the joining date at BillDesk was January 2016.",
       points: [
         "Developed Java and Spring backend services for internal payment systems.",
         "Optimised PostgreSQL schemas for transactional correctness and reporting.",
       ],
     },
     {
-      role: "Google Summer of Code Intern — KDE Sheets",
+      role: "Google Summer of Code Intern, KDE Sheets",
       company: "KDE",
       place: "Remote",
-      period: "May 2014 — Sep 2014",
+      period: "May 2014 to Sep 2014",
       points: [
         "Implemented user-facing UI features for KDE Sheets as part of Google Summer of Code.",
         "Collaborated with global open-source maintainers on feature design and code reviews.",
@@ -285,13 +263,13 @@ export const site = {
   education: {
     school: "National Institute of Technology Durgapur, India",
     degree: "B.Tech in Computer Science and Engineering",
-    period: "Aug 2011 — May 2015",
+    period: "Aug 2011 to May 2015",
   },
 
   /* ---- Contact section text ---------------------------------------------- */
   contact: {
-    heading: "Tell me what you're building",
-    body: "I'm taking on new contract work. Tell me what you're building and I'll come back within two business days with an honest read on scope, timeline and cost. Email me, or let's get on a Google Meet.",
+    heading: "Tell me what you are building",
+    body: "If you are building in payments, or working on agents that need to pay for things, I would like to hear about it. I answer within two business days. Email me, or get on a Google Meet with me.",
   },
 };
 

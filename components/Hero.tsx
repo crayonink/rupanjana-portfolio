@@ -124,7 +124,7 @@ export default function Hero() {
           </div>
 
           <p className="margin-note mt-8 max-w-xs">
-            (the drawings are the best part — keep scrolling)
+            (the drawings are the best part, keep scrolling)
           </p>
         </div>
 

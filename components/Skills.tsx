@@ -21,7 +21,7 @@ export default function Skills() {
 
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="what's in the pencil case"
+          eyebrow="what is in the pencil case"
           title="Skills"
         />
 

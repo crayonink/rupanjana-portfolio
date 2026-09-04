@@ -72,7 +72,7 @@ export default function About() {
       </div>
 
       <div className="mx-auto max-w-6xl">
-        <SectionHeading eyebrow="who's behind all this" title="About me" />
+        <SectionHeading eyebrow="who is behind all this" title="About me" />
 
         <div className="mt-16 grid items-start gap-14 lg:grid-cols-[1.15fr_1fr]">
           {/* ---------------- The story ---------------- */}
@@ -211,7 +211,7 @@ export default function About() {
                 </span>
                 {quote.source && (
                   <cite className="font-hand text-xl not-italic text-muted">
-                    — {quote.source}
+                    {quote.source}
                   </cite>
                 )}
               </figcaption>
